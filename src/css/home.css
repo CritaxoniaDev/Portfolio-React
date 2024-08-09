@@ -1,0 +1,120 @@
+@keyframes colorCycle {
+  0% {
+    color: #FF6B6B;
+    /* Coral Red */
+  }
+
+  25% {
+    color: #4ECDC4;
+    /* Caribbean Green */
+  }
+
+  50% {
+    color: #FFA500;
+    /* Orange */
+  }
+
+  75% {
+    color: #9B59B6;
+    /* Amethyst Purple */
+  }
+
+  100% {
+    color: #FF6B6B;
+    /* Back to Coral Red */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes levitate {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-19px);
+  }
+}
+
+.animate-levitate {
+  animation: levitate 3s ease-in-out infinite;
+}
+
+.color-cycle {
+  animation: colorCycle 4s infinite;
+}
+
+.text-shadow-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.glow-blue {
+  text-shadow: 0 0 10px #3B82F6, 0 0 20px #3B82F6;
+}
+
+.glow-green {
+  text-shadow: 0 0 10px #10B981, 0 0 20px #10B981;
+}
+
+.glow-purple {
+  text-shadow: 0 0 10px #8B5CF6, 0 0 20px #8B5CF6;
+}
+
+.glow-orange {
+  text-shadow: 0 0 10px #F59E0B, 0 0 20px #F59E0B;
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: translateY(0) scale(0);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1);
+  }
+
+  100% {
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+.flicker-glow {
+  animation: flicker 0.5s ease-in-out infinite alternate;
+  position: relative;
+}
+
+.flicker-glow::after {
+  content: '✨';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 24px;
+  animation: spark 1s ease-in-out infinite;
+}
