@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import SparklesText from "./components/magicui/sparkles-text";
+import Particles from './components/magicui/particles';
 import { useMediaQuery } from 'react-responsive';
 import WordRotate from './components/magicui/word-rotate';
 import gsap from 'gsap';
@@ -85,7 +86,14 @@ function Home({ isDarkMode }) {
             id="home"
             className={`min-h-screen flex items-center justify-center ${isDarkMode ? 'bg-gray-900 dark-mode-bg' : 'bg-gradient-to-br from-indigo-50 to-blue-100'} overflow-hidden relative`}
         >
-            <ParticleBackground />
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                staticity={50}
+                color={isDarkMode ? "#ffffff" : "#000000"}
+                ease={50}
+                refresh={false}
+            />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.2 }}

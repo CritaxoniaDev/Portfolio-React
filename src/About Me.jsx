@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import Particles from './components/magicui/particles';
 import './css/about.css'
 
 const About = ({ isDarkMode }) => {
@@ -29,6 +30,14 @@ const About = ({ isDarkMode }) => {
 
     return (
         <section id="aboutme" className={`min-h-screen py-20 flex items-center justify-center ${isDarkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-indigo-50 to-blue-100'} overflow-hidden relative animate-fade-in`}>
+            <Particles
+                className="absolute inset-0"
+                quantity={100}
+                staticity={50}
+                color={isDarkMode ? "#ffffff" : "#000000"}
+                ease={50}
+                refresh={false}
+            />
             <div className="absolute inset-0 opacity-20 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className={`absolute bottom-20 right-20 w-32 h-32 ${isDarkMode ? 'bg-purple-600' : 'bg-purple-300'} rounded-full animate-pulse`}></div>
                 <div className={`absolute top-20 left-20 w-24 h-24 ${isDarkMode ? 'bg-teal-600' : 'bg-teal-300'} rounded-full animate-bounce`}></div>
