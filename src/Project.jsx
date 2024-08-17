@@ -80,6 +80,14 @@ const projectData = [
     image: "../images/project-9.png",
     githubLink: "https://weather-finder-crit.netlify.app/",
     objective: "Just to make a website for a Weather Finder."
+  },
+  {
+    title: "Edu-Insight",
+    description: "A website that is a learning platform that can access and knowledge about the different skills of software engineering course.",
+    technologies: ["Nextjs", "Typescript", "Tailwind", "CSS", "JavaScript"],
+    image: "../images/project-10.png",
+    githubLink: "https://edu-insight.vercel.app/",
+    objective: "Just to make a website for a Learning Platform."
   }
 ];
 
