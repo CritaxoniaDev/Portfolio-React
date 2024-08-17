@@ -181,7 +181,7 @@ function Home({ isDarkMode }) {
                         className={`${isMobile ? 'text-2xl' : 'text-3xl'} font-bold ${isDarkMode ? 'text-indigo-400' : 'text-indigo-600'} ${isMobile ? 'h-8' : 'h-10'} mb-4`}
                     />
                     <p className={`text-md mb-4 mr-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} leading-relaxed`}>
-                        A BSIT - Software Engineering Student at First City Providential College.
+                        A BSIT - Software Engineering Student at First City Providential College. and a aspiring Full-Stack Developer based in the Philippines.
                     </p>
                     <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} space-y-4 md:space-y-0 md:space-x-6 mb-8`}>
                         <button
