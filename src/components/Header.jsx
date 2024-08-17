@@ -46,17 +46,24 @@ function Header({ isDarkMode }) {
 
   return (
     <header
-      className={`fixed top-0 ${isMobile ? 'left-2 right-2' : isTablet ? 'left-10 right-10' : 'left-28 right-28'} ${isMobile ? 'px-4' : isTablet ? 'px-12' : 'px-20'} rounded-full z-50 ${isDarkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900' : 'bg-gradient-to-r from-purple-600 to-indigo-600'} text-white shadow-lg transition-all duration-300 ease-in-out ${scrollPosition > 0 ? 'mt-0' : 'mt-5'}`}
+      className={`fixed top-0 ${isMobile ? 'left-2 right-2' : isTablet ? 'left-10 right-10' : 'left-28 right-28'
+        } ${isMobile ? 'px-4' : isTablet ? 'px-12' : 'px-20'
+        } rounded-full z-50 ${isDarkMode
+          ? 'bg-gray-900 bg-opacity-50 border border-gray-700'
+          : 'bg-white bg-opacity-50 border border-purple-300'
+        } text-white shadow-lg transition-all duration-300 ease-in-out ${scrollPosition > 0 ? 'mt-0' : 'mt-5'
+        }`}
       style={{
         transform: `translateY(${scrollPosition > 0 ? '0' : '-5px'})`,
         opacity: scrollPosition > 0 ? 1 : 0.95,
+        backdropFilter: 'blur(5px)',
       }}
     >
       <div className={`h-1 ${isDarkMode ? 'bg-yellow-500' : 'bg-yellow-300'} transition-all duration-300 ease-in-out`} style={{ width: `${scrollProgress}%` }}></div>
       <nav className={`container mx-auto ${isMobile ? 'px-4 py-3' : isTablet ? 'px-5 py-3.5' : 'px-6 py-4'}`}>
         <div className="flex justify-between items-center">
-          <div className={`${isMobile ? 'text-xl' : isTablet ? 'text-xl' : 'text-2xl'} font-extrabold tracking-tight`}>
-            <span className={`${isDarkMode ? 'text-yellow-500' : 'text-yellow-300'} animate-pulse`}>Gian </span>
+          <div className={`${isMobile ? 'text-xl' : isTablet ? 'text-xl' : 'text-2xl'} font-extrabold tracking-tight ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            <span className={`${isDarkMode ? 'text-yellow-400' : 'text-yellow-600'} animate-pulse`}>Gian </span>
             <span className={`bg-clip-text animate-pulse text-transparent ${isDarkMode ? 'bg-gradient-to-r from-red-400 to-orange-600' : 'bg-gradient-to-r from-red-600 to-orange-800'}`}>Alcantara</span>
           </div>
           <div className="hidden md:flex space-x-1">
@@ -82,7 +89,7 @@ function Header({ isDarkMode }) {
                     ? isDarkMode
                       ? 'bg-gradient-to-r from-gray-700 to-gray-800 text-white shadow-glow'
                       : 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-glow'
-                    : `text-white ${isDarkMode ? 'hover:bg-gray-700' : 'hover:bg-white hover:text-indigo-600'}`
+                    : `${isDarkMode ? 'text-white hover:bg-gray-700' : 'text-black hover:bg-white hover:text-indigo-600'}`
                   }`}
               >
                 <item.icon className="mr-2 group-hover:animate-bounce" />
@@ -95,7 +102,7 @@ function Header({ isDarkMode }) {
           </div>
           <div className="md:hidden relative">
             <button
-              className="text-white focus:outline-none hover:text-yellow-300 transition duration-300"
+              className={`${isDarkMode ? 'text-white' : 'text-black'} focus:outline-none hover:text-yellow-300 transition duration-300`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <div className={`w-6 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'transform rotate-45 translate-y-1.5' : ''}`}></div>
