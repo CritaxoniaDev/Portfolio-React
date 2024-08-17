@@ -137,13 +137,13 @@ function Home({ isDarkMode }) {
                         <a href="#" className={`${isDarkMode ? 'text-[#5C9EFF] hover:text-[#7EADFF]' : 'text-[#4285F4] hover:text-[#3367D6]'} transition duration-300 transform hover:scale-110`}>
                             <FaGoogle size={28} />
                         </a>
-                        <a href="#" className={`${isDarkMode ? 'text-[#E6EDF3] hover:text-white' : 'text-[#333] hover:text-[#2b3137]'} transition duration-300 transform hover:scale-110`}>
+                        <a href="https://github.com/CritaxoniaDev" className={`${isDarkMode ? 'text-[#E6EDF3] hover:text-white' : 'text-[#333] hover:text-[#2b3137]'} transition duration-300 transform hover:scale-110`}>
                             <FaGithub size={28} />
                         </a>
-                        <a href="#" className={`${isDarkMode ? 'text-[#0A66C2] hover:text-[#0077B5]' : 'text-[#0077B5] hover:text-[#0a66c2]'} transition duration-300 transform hover:scale-110`}>
+                        <a href="https://www.linkedin.com/in/gian-alcantara-7293282a9/" className={`${isDarkMode ? 'text-[#0A66C2] hover:text-[#0077B5]' : 'text-[#0077B5] hover:text-[#0a66c2]'} transition duration-300 transform hover:scale-110`}>
                             <FaLinkedin size={28} />
                         </a>
-                        <a href="#" className={`${isDarkMode ? 'text-[#1877F2] hover:text-[#4267B2]' : 'text-[#4267B2] hover:text-[#385898]'} transition duration-300 transform hover:scale-110`}>
+                        <a href="https://www.facebook.com/raprappogi15/" className={`${isDarkMode ? 'text-[#1877F2] hover:text-[#4267B2]' : 'text-[#4267B2] hover:text-[#385898]'} transition duration-300 transform hover:scale-110`}>
                             <FaFacebook size={28} />
                         </a>
                     </div>

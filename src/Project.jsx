@@ -14,7 +14,7 @@ const projectData = [
     description: "A Java terminal console program to compute monthly training fees for athletes, simplifying fee calculations and managing financial commitments.",
     technologies: ["Java"],
     image: "../images/project-1.png",
-    githubLink: "https://github.com/yourusername/north-sussex-judo",
+    githubLink: "https://github.com/CritaxoniaDev/North-Sussex-Judo",
     objective: "Build a software program that calculates monthly expenses for judo athletes, including training plans, competition entries, and private coaching hours."
   },
   {
@@ -22,7 +22,7 @@ const projectData = [
     description: "A website for a martial arts gym offering various classes, fitness training, and self-defense courses.",
     technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
     image: "../images/project-2.png",
-    githubLink: "https://github.com/yourusername/dobu-martial-arts",
+    githubLink: "https://github.com/CritaxoniaDev/Dobu-Martial-Arts",
     objective: "Design and create an engaging website for DoBu Martial Arts, showcasing the gym's offerings and allowing users to manage their membership."
   },
   {
@@ -38,7 +38,7 @@ const projectData = [
     description: "A computer system for personal finance services, serving both staff and clients.",
     technologies: ["JSP", "CSS", "JavaScript", "Bootstrap", "MySQL", "Java (Spring Framework)"],
     image: "../images/project-4.png",
-    githubLink: "https://github.com/yourusername/enomy-finances",
+    githubLink: "https://github.com/CritaxoniaDev/Enomy-Finances",
     objective: "Design and implement a new computer system for Enomy-Finances, including core system processes and software designs for client presentation."
   },
   {
@@ -46,7 +46,7 @@ const projectData = [
     description: "A Used Car Sales portal with functionalities for Users and Administrators.",
     technologies: ["JSP", "CSS", "Bootstrap", "JavaScript", "MySQL", "Java (Spring Framework)", "Spring Boot"],
     image: "../images/project-5.png",
-    githubLink: "https://github.com/yourusername/abc-cars-portal",
+    githubLink: "https://github.com/CritaxoniaDev/ABCCarsPortal",
     objective: "Create a comprehensive online platform facilitating the buying and selling of used cars, with distinct functionalities for users and administrators."
   },
   {
@@ -54,7 +54,7 @@ const projectData = [
     description: "A software application for MerryMeal, a charitable organization delivering meals to qualified adults.",
     technologies: ["PHP", "Laravel", "Blade", "MySQL", "CSS", "JavaScript", "Tailwind", "Stripe API"],
     image: "../images/project-6.png",
-    githubLink: "https://github.com/yourusername/meals-on-wheels",
+    githubLink: "https://github.com/CritaxoniaDev/Mealsonwheels",
     objective: "Design and develop a comprehensive software application for MerryMeal to streamline various processes including registration, meal planning, and delivery management."
   },
   {
@@ -62,7 +62,7 @@ const projectData = [
     description: "A fan made website for the Bini Philipine-Pop Group.",
     technologies: ["React", "Typescript", "Tailwind", "CSS", "JavaScript"],
     image: "../images/project-7.png",
-    githubLink: "https://github.com/yourusername/meals-on-wheels",
+    githubLink: "https://biniwebsite.netlify.app/",
     objective: "Just to make a website for the BINI Philipine-Pop Group."
   },
   {
@@ -72,6 +72,14 @@ const projectData = [
     image: "../images/project-8.png",
     githubLink: "https://github.com/yourusername/meals-on-wheels",
     objective: "Just to make a website for a Music Player."
+  },
+  {
+    title: "Weather-App",
+    description: "A website that can search for the weather of a specific location using the Open Weather API.",
+    technologies: ["Vanilla", "Open Weather API", "Tailwind", "CSS", "JavaScript"],
+    image: "../images/project-9.png",
+    githubLink: "https://weather-finder-crit.netlify.app/",
+    objective: "Just to make a website for a Weather Finder."
   }
 ];
 
@@ -148,7 +156,7 @@ const Projects = ({ isDarkMode }) => {
                   <div className={`absolute bottom-0 left-0 right-0 p-4 sm:p-6 ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                     <div className="flex justify-center">
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className={`flex items-center text-xs sm:text-sm ${isDarkMode ? 'bg-indigo-700 hover:bg-indigo-800' : 'bg-indigo-600 hover:bg-indigo-700'} text-white px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full transition-colors duration-300`}>
-                        <FaGithub className="mr-2 text-sm sm:text-base" /> View on GitHub
+                        <FaGithub className="mr-2 text-sm sm:text-base" /> View on GitHub or Website
                       </a>
                     </div>
                   </div>
