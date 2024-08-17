@@ -19,7 +19,7 @@ function Home({ isDarkMode }) {
 
     const skillRef = useRef(null);
 
-    const skills = ['Front-end Developer', 'Prompt Engineer', 'Back-end Developer', 'UI/UX Designer', 'Database Designer'];
+    const skills = ['Front-end Developer', 'Back-end Developer', 'UI/UX Designer'];
 
     useEffect(() => {
         const tl = gsap.timeline({ repeat: -1 });
