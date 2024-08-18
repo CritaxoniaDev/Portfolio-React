@@ -1,35 +1,46 @@
 import React, { useEffect } from 'react';
+import { BorderBeam } from '@/components/magicui/border-beam';
 import { useMediaQuery } from 'react-responsive';
 import './css/education.css';
 import { FaGraduationCap, FaUniversity, FaSchool, FaBook, FaLaptopCode, FaUserGraduate } from 'react-icons/fa';
 
 const EducationCard = ({ school, degree, date, address, status, logo, image, icon: Icon, isMobile, isDarkMode }) => (
-  <div className={`order-1 ${isDarkMode ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-white hover:bg-gray-50'} rounded-xl shadow-xl ${isMobile ? 'w-full' : 'w-5/12'} ${isMobile ? 'px-6 py-6' : 'px-10 py-8'} transform hover:scale-105 transition-all duration-300 hover:shadow-2xl group relative overflow-hidden animate-on-scroll border-2 ${isDarkMode ? 'border-teal-700 hover:border-teal-500' : 'border-teal-100 hover:border-teal-300'}`}>
-    <div className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-300 filter blur-sm" style={{ backgroundImage: `url(${image})` }}></div>
+  <>
+    <div className={`order-1 ${isDarkMode ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-white hover:bg-gray-50'} rounded-xl shadow-xl ${isMobile ? 'w-full' : 'w-5/12'} ${isMobile ? 'px-6 py-6' : 'px-10 py-8'} transform hover:scale-105 transition-all duration-300 hover:shadow-2xl group relative overflow-hidden animate-on-scroll border-2 ${isDarkMode ? 'border-teal-700 hover:border-teal-500' : 'border-teal-100 hover:border-teal-300'}`}>
+      <div className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-300 filter blur-sm" style={{ backgroundImage: `url(${image})` }}></div>
+      <BorderBeam
+        size={200}
+        duration={20}
+        anchor={50}
+        borderWidth={3}
+        colorFrom="#4f46e5"
+        colorTo="#9333ea"
+        delay={0}
+      />
+      <div className={`absolute -bottom-10 -right-10 ${isMobile ? 'w-48 h-48' : 'w-64 h-64'} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill={isDarkMode ? "#0D9488" : "#14B8A6"} d="M40,120 L60,120 L60,80 L40,80 L40,120 Z M70,120 L90,120 L90,80 L70,80 L70,120 Z M100,120 L140,120 L140,100 L120,100 L120,80 L100,80 L100,120 Z" transform="rotate(-30 100 100) scale(1.5)" />
+        </svg>
+      </div>
 
-    <div className={`absolute -bottom-10 -right-10 ${isMobile ? 'w-48 h-48' : 'w-64 h-64'} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}>
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <path fill={isDarkMode ? "#0D9488" : "#14B8A6"} d="M40,120 L60,120 L60,80 L40,80 L40,120 Z M70,120 L90,120 L90,80 L70,80 L70,120 Z M100,120 L140,120 L140,100 L120,100 L120,80 L100,80 L100,120 Z" transform="rotate(-30 100 100) scale(1.5)" />
-      </svg>
+      <div className={`absolute top-4 right-4 ${isMobile ? 'w-12 h-12' : 'w-16 h-16'} opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12`}>
+        <img src={logo} alt={`${school} logo`} className="w-full h-full object-contain drop-shadow-lg" />
+      </div>
+      <h3 className={`mb-4 font-bold ${isDarkMode ? 'text-teal-400 group-hover:text-teal-300' : 'text-teal-700 group-hover:text-teal-600'} ${isMobile ? 'text-lg' : 'text-xl'} flex items-center transition-colors duration-300 pb-2 border-b-2 ${isDarkMode ? 'border-teal-700 group-hover:border-teal-500' : 'border-teal-200 group-hover:border-teal-300'}`}>
+        {Icon ? <Icon className={`mr-3 ${isMobile ? 'text-xl' : 'text-2xl'}`} /> : <FaUniversity className={`mr-3 ${isMobile ? 'text-xl' : 'text-2xl'}`} />} {school}
+      </h3>
+      <div className={`space-y-2 ${isDarkMode ? 'text-gray-300 group-hover:text-gray-200' : 'text-gray-700 group-hover:text-gray-800'} transition-colors duration-300`}>
+        <p className={`font-semibold ${isDarkMode ? 'text-teal-400 group-hover:text-teal-300' : 'text-teal-600 group-hover:text-teal-500'} ${isMobile ? 'text-base' : 'text-lg'}`}>{degree}</p>
+        <p className={`italic ${isMobile ? 'text-sm' : 'text-base'}`}>{date}</p>
+        <p className={`${isMobile ? 'text-xs' : 'text-sm'} ${isDarkMode ? 'text-gray-400 group-hover:text-gray-300' : 'text-gray-500 group-hover:text-gray-600'} transition-colors duration-300`}>{address}</p>
+      </div>
+      <div className={`mt-6 flex justify-end pt-4 border-t-2 ${isDarkMode ? 'border-teal-700 group-hover:border-teal-500' : 'border-teal-100 group-hover:border-teal-200'}`}>
+        <span className={`bg-${status.color}-100 ${isDarkMode ? 'text-gray-900' : `text-${status.color}-800`} ${isMobile ? 'text-xs' : 'text-sm'} font-medium px-3 py-1.5 rounded-full shadow-md transform group-hover:scale-110 transition-all duration-300 border ${isDarkMode ? `border-${status.color}-400` : `border-${status.color}-300`}`}>
+          {status.text}
+        </span>
+      </div>
     </div>
-
-    <div className={`absolute top-4 right-4 ${isMobile ? 'w-12 h-12' : 'w-16 h-16'} opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12`}>
-      <img src={logo} alt={`${school} logo`} className="w-full h-full object-contain drop-shadow-lg" />
-    </div>
-    <h3 className={`mb-4 font-bold ${isDarkMode ? 'text-teal-400 group-hover:text-teal-300' : 'text-teal-700 group-hover:text-teal-600'} ${isMobile ? 'text-lg' : 'text-xl'} flex items-center transition-colors duration-300 pb-2 border-b-2 ${isDarkMode ? 'border-teal-700 group-hover:border-teal-500' : 'border-teal-200 group-hover:border-teal-300'}`}>
-      {Icon ? <Icon className={`mr-3 ${isMobile ? 'text-xl' : 'text-2xl'}`} /> : <FaUniversity className={`mr-3 ${isMobile ? 'text-xl' : 'text-2xl'}`} />} {school}
-    </h3>
-    <div className={`space-y-2 ${isDarkMode ? 'text-gray-300 group-hover:text-gray-200' : 'text-gray-700 group-hover:text-gray-800'} transition-colors duration-300`}>
-      <p className={`font-semibold ${isDarkMode ? 'text-teal-400 group-hover:text-teal-300' : 'text-teal-600 group-hover:text-teal-500'} ${isMobile ? 'text-base' : 'text-lg'}`}>{degree}</p>
-      <p className={`italic ${isMobile ? 'text-sm' : 'text-base'}`}>{date}</p>
-      <p className={`${isMobile ? 'text-xs' : 'text-sm'} ${isDarkMode ? 'text-gray-400 group-hover:text-gray-300' : 'text-gray-500 group-hover:text-gray-600'} transition-colors duration-300`}>{address}</p>
-    </div>
-    <div className={`mt-6 flex justify-end pt-4 border-t-2 ${isDarkMode ? 'border-teal-700 group-hover:border-teal-500' : 'border-teal-100 group-hover:border-teal-200'}`}>
-      <span className={`bg-${status.color}-100 ${isDarkMode ? 'text-gray-900' : `text-${status.color}-800`} ${isMobile ? 'text-xs' : 'text-sm'} font-medium px-3 py-1.5 rounded-full shadow-md transform group-hover:scale-110 transition-all duration-300 border ${isDarkMode ? `border-${status.color}-400` : `border-${status.color}-300`}`}>
-        {status.text}
-      </span>
-    </div>
-  </div>
+  </>
 );
 
 const Education = ({ isDarkMode }) => {
