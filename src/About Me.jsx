@@ -51,7 +51,7 @@ const About = ({ isDarkMode }) => {
                 <div className={`max-w-5xl mx-auto ${isDarkMode ? 'bg-gray-800' : 'bg-white'} bg-opacity-90 rounded-2xl shadow-2xl overflow-hidden backdrop-filter backdrop-blur-lg ${isDarkMode ? 'border-gray-700' : 'border-indigo-200'} animate-on-scroll`}>
                     <div className={`${isMobile ? 'flex-col' : 'md:flex'} items-stretch`}>
                         <div className={`${isMobile ? 'w-full' : 'md:w-2/5'} relative overflow-hidden`}>
-                            <img className="h-full w-full object-cover" src="images/yorforgerrr.jpg" alt="Gian Raphael D. Alcantara" />
+                            <img className="h-full w-full object-cover" src="images/aboutme.jpg" alt="Gian Raphael D. Alcantara" />
                             <div className="absolute inset-0 bg-gradient-to-t from-indigo-600 to-transparent opacity-70"></div>
                             <div className="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
                                 <span className="font-bold text-2xl">Gian Raphael</span>
