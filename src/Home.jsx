@@ -143,7 +143,7 @@ function Home({ isDarkMode }) {
                         <a href="https://www.linkedin.com/in/gian-alcantara-7293282a9/" className={`${isDarkMode ? 'text-[#0A66C2] hover:text-[#0077B5]' : 'text-[#0077B5] hover:text-[#0a66c2]'} transition duration-300 transform hover:scale-110`}>
                             <FaLinkedin size={28} />
                         </a>
-                        <a href="https://www.facebook.com/raprappogi15/" className={`${isDarkMode ? 'text-[#1877F2] hover:text-[#4267B2]' : 'text-[#4267B2] hover:text-[#385898]'} transition duration-300 transform hover:scale-110`}>
+                        <a href="https://www.facebook.com/giancritaxonia/" className={`${isDarkMode ? 'text-[#1877F2] hover:text-[#4267B2]' : 'text-[#4267B2] hover:text-[#385898]'} transition duration-300 transform hover:scale-110`}>
                             <FaFacebook size={28} />
                         </a>
                     </div>
