@@ -55,7 +55,7 @@ function App() {
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const [isDarkMode, setIsDarkMode] = useState(() => true);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const [loadingText, setLoadingText] = useState('');
@@ -234,9 +234,9 @@ function App() {
               <DarkModeToggle
                 onChange={setIsDarkMode}
                 checked={isDarkMode}
-                size={isMobile ? 55 : 60}
+                size={isMobile ? 55 : 80}
               />
-              <button
+              {/* <button
                 onClick={togglePlaylist}
                 className={`${isDarkMode ? 'bg-indigo-500 hover:bg-indigo-600' : 'bg-indigo-600 hover:bg-indigo-700'} text-white rounded-full ${isMobile ? 'p-2' : 'p-3'} shadow-lg transition duration-300`}
               >
@@ -281,9 +281,9 @@ function App() {
                     background: `linear-gradient(to right, ${isDarkMode ? '#818CF8' : '#4F46E5'} 0%, ${isDarkMode ? '#818CF8' : '#4F46E5'} ${volume * 100}%, ${isDarkMode ? '#4B5563' : '#E5E7EB'} ${volume * 100}%, ${isDarkMode ? '#4B5563' : '#E5E7EB'} 100%)`
                   }}
                 />
-              </div>
+              </div> */}
             </div>
-            {showPlaylist && (
+            {/* {showPlaylist && (
               <div
                 className={`fixed ${isMobile ? 'bottom-16 left-2 right-2' : 'bottom-20 left-4'} z-50 transition-all duration-300 ease-in-out`}
                 style={{
@@ -300,7 +300,7 @@ function App() {
                   isDarkMode={isDarkMode}
                 />
               </div>
-            )}
+            )} */}
             {showScrollTop && (
               <button
                 onClick={scrollToTop}
