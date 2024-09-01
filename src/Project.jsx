@@ -25,14 +25,14 @@ const projectData = [
     githubLink: "https://github.com/CritaxoniaDev/Dobu-Martial-Arts",
     objective: "Design and create an engaging website for DoBu Martial Arts, showcasing the gym's offerings and allowing users to manage their membership."
   },
-  {
-    title: "Boutiqa E-Commerce",
-    description: "A prototype design for a Rich Internet Application (RIA) facilitating product promotion and purchases.",
-    technologies: ["Axure RP 10"],
-    image: "../images/project-3.png",
-    githubLink: "https://github.com/yourusername/boutiqa-ecommerce",
-    objective: "Develop a prototype application providing a customer-centric experience, focusing on enhancing user experience for both sellers and buyers."
-  },
+  // {
+  //   title: "Boutiqa E-Commerce",
+  //   description: "A prototype design for a Rich Internet Application (RIA) facilitating product promotion and purchases.",
+  //   technologies: ["Axure RP 10"],
+  //   image: "../images/project-3.png",
+  //   githubLink: "https://github.com/yourusername/boutiqa-ecommerce",
+  //   objective: "Develop a prototype application providing a customer-centric experience, focusing on enhancing user experience for both sellers and buyers."
+  // },
   {
     title: "Enomy Finances",
     description: "A computer system for personal finance services, serving both staff and clients.",
@@ -57,22 +57,22 @@ const projectData = [
     githubLink: "https://github.com/CritaxoniaDev/Mealsonwheels",
     objective: "Design and develop a comprehensive software application for MerryMeal to streamline various processes including registration, meal planning, and delivery management."
   },
-  {
-    title: "BINIWebsite",
-    description: "A fan made website for the Bini Philipine-Pop Group.",
-    technologies: ["React", "Typescript", "Tailwind", "CSS", "JavaScript"],
-    image: "../images/project-7.png",
-    githubLink: "https://biniwebsite.netlify.app/",
-    objective: "Just to make a website for the BINI Philipine-Pop Group."
-  },
-  {
-    title: "MUPlayer",
-    description: "A website that is a music player that can search music and videos through a integration of Youtube API.",
-    technologies: ["React", "Youtube API", "Tailwind", "CSS", "JavaScript"],
-    image: "../images/project-8.png",
-    githubLink: "https://github.com/yourusername/meals-on-wheels",
-    objective: "Just to make a website for a Music Player."
-  },
+  // {
+  //   title: "BINIWebsite",
+  //   description: "A fan made website for the Bini Philipine-Pop Group.",
+  //   technologies: ["React", "Typescript", "Tailwind", "CSS", "JavaScript"],
+  //   image: "../images/project-7.png",
+  //   githubLink: "https://biniwebsite.netlify.app/",
+  //   objective: "Just to make a website for the BINI Philipine-Pop Group."
+  // },
+  // {
+  //   title: "MUPlayer",
+  //   description: "A website that is a music player that can search music and videos through a integration of Youtube API.",
+  //   technologies: ["React", "Youtube API", "Tailwind", "CSS", "JavaScript"],
+  //   image: "../images/project-8.png",
+  //   githubLink: "https://github.com/yourusername/meals-on-wheels",
+  //   objective: "Just to make a website for a Music Player."
+  // },
   {
     title: "Weather-App",
     description: "A website that can search for the weather of a specific location using the Open Weather API.",
